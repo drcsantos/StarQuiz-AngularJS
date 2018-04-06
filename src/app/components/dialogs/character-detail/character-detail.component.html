@@ -1,0 +1,57 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Dicas</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="media" *ngIf="character">
+    <img style="max-height: 150px" class="img-thumbnail mr-3" src="{{character.image}}" alt="Imagem">
+    <div class="media-body">
+      <h5 class="mt-0">Raça: {{specie}}</h5>
+      <p>
+        <span class="badge badge-secondary">Planeta: {{character.homeworld}}</span>
+      </p>
+      <table class="table">
+        <tr>
+          <td>
+            <p>
+              <b>Ano:</b>
+              {{format(character.birthYear)}}
+            </p>
+            <p>
+              <b>Altura:</b>
+              {{format(character.height, 'cm')}}
+            </p>
+            <p>
+              <b>Peso:</b>
+              {{format(character.mass, 'Kg')}}
+            </p>
+          </td>
+          <td>
+            <p>
+              <b>Pele:</b>
+              {{format(character.skinColor)}}
+            </p>
+            <p>
+              <b>Olhos:</b>
+              {{format(character.eyeColor)}}
+            </p>
+            <p>
+              <b>Cabelos:</b>
+              {{format(character.hairColor)}}
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>
+    <ul *ngIf="character.films">
+      <li *ngFor="let film of character.films">{{film}}</li>
+    </ul>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Fechar</button>
+</div>

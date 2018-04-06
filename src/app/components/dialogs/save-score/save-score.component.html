@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h3 class="modal-title pull-left">
+    <i class="fa fa-trophy"></i>
+    Parabéns!
+  </h3>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <h1>Sua pontuação:
+    <small>{{result.score}}</small>
+  </h1>
+  <p>Você completou nosso QUIZ respondendo os nomes de {{result.answers.length}} diferentes personagens de
+    <b>Star Wars</b> e acertou o nome de {{result.hits}} deles.</p>
+  <p>Gostaria de salvar sua pontuação?</p>
+  <form [ngClass]="{'was-validated': mainForm.valid}" [formGroup]="mainForm" novalidate>
+    <div class="form-group">
+      <label>Nome:</label>
+      <input type="text" class="form-control" [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched), 'is-valid': name.valid && (name.dirty || name.touched)}"
+        formControlName="name" autofocus placeholder="Nome do jogador">
+    </div>
+    <div class="form-group">
+      <label>E-mail:</label>
+      <input type="email" class="form-control" [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched), 'is-valid': email.valid && (email.dirty || email.touched)}"
+        formControlName="email" placeholder="Enter email">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Fechar</button>
+  <button type="button" class="btn btn-primary" [ngClass]="{'btn-primary': mainForm.valid, 'btn-default': mainForm.invalid}"
+    [disabled]="mainForm.invalid" (click)="save()">Salvar</button>
+</div>

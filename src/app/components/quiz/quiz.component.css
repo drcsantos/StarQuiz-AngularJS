@@ -1,0 +1,52 @@
+.loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #dedede;
+}
+
+.card.hovercard {
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.card.hovercard .card-background {
+  min-height: 430px;
+}
+
+.card-background img {
+  -webkit-filter: blur(25px);
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+  filter: blur(25px);
+  margin-left: -100px;
+  margin-top: -200px;
+  min-width: 130%;
+  max-height: 600px;
+}
+
+.card.hovercard .avatar {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+}
+
+.card.hovercard .avatar img {
+  max-width: 300px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.26);
+}

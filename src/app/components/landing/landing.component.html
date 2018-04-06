@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col">
+    <div class="card my-5">
+      <div class="card-body">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+          <div class="col-md-7 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal">Star Wars
+              <small><span class="badge badge-primary">Quiz</span></small>
+            </h1>
+            <p class="lead font-weight-normal">Teste seus conhecimentos sobre os personagens da maior franquia Geek de todos os tempos. E que a força esteja
+              com você</p>
+            <a class="btn btn-outline-secondary btn-lg" [routerLink]="['quiz']" href="">{{quiz.isPlaying() ? 'Voltar ao Quiz' : 'Iniciar Quiz'}}</a>
+          </div>
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+              <div class="col-md-4">
+                <h2>Como jogar?</h2>
+                <p>Você deve escrever o nome do personagem de acordo com a respectiva imagem que aparece. </p>
+              </div>
+              <div class="col-md-4">
+                <h2>Acertos</h2>
+                <p>Cada acerto vale 10 pontos, os erros não descontam ponto algum! Então tente, tente e tente mais! Você pode optar por pular o personagem e também não debitará nenhum ponto ganho. </p>
+              </div>
+              <div class="col-md-4">
+                <h2>Ajuda</h2>
+                <p>A qualquer momento você pode clicar no no botão com o icone <i class="fa fa-question-circle"></i> que aparecerá dicas sobre o personagem, mas fique atento! os acertos utilizando o botão de ajuda valem apenas 5 pontos.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

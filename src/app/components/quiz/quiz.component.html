@@ -1,0 +1,29 @@
+<app-quiz-navbar></app-quiz-navbar>
+<div *ngIf="!person && !result" class="card-body loading">
+  <img src="assets/loading.svg" alt="loading">
+</div>
+<div *ngIf="person && quiz.isPlaying()" class="card mb-3 hovercard">
+  <div class="card-body">
+    <div class="card-background">
+      <img class="card-bkimg" alt="" src="{{person.image}}">
+    </div>
+    <div class="avatar">
+      <img alt="" src="{{person.image}}">
+    </div>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <button type="button" [disabled]="loading" class="btn btn-outline-warning" (click)="showCharacterDetail()">
+          <i class="fa fa-question-circle"></i>
+        </button>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="typedAnswer" (keydown.enter)="submitAnswer()" placeholder="Nome do Personagem"
+        aria-label="Nome do Personagem" autofocus>
+      <div class="input-group-append">
+        <button type="button" [disabled]="loading" class="btn btn-outline-primary" (click)="submitAnswer()">
+          <i class="fa" [ngClass]="{'fa-thumbs-up': typedAnswer !== '', 'fa-thumbs-down': !typedAnswer || typedAnswer === ''}"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-quiz-result-view *ngIf="!quiz.isPlaying() && result" [result]="result"></app-quiz-result-view>
