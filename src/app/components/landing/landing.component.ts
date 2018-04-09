@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  showRanking = false;
+
   constructor(public quiz: QuizService) { }
 
   ngOnInit() {
+  }
+
+  toggleShowRanking() {
+    this.showRanking = !this.showRanking;
   }
 
 }

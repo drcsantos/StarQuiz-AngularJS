@@ -14,7 +14,7 @@ import { QuizNavbarComponent } from './components/ux/quiz-navbar/quiz-navbar.com
 import { QuizResultViewComponent } from './components/ux/quiz-result-view/quiz-result-view.component';
 import { CharacterDetailComponent } from './components/dialogs/character-detail/character-detail.component';
 import { SaveScoreComponent } from './components/dialogs/save-score/save-score.component';
-import { RankingComponent } from './ranking/ranking.component';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 @NgModule({
   declarations: [
