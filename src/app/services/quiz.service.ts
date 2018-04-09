@@ -15,7 +15,7 @@ import { CharacterDetailComponent, SaveScoreComponent } from '../components/dial
 @Injectable()
 export class QuizService {
   public options = {
-    duration: 20 // indicates the time in which quiz needs to be completed. 0 means unlimited.
+    duration: 120 // indicates the time in which quiz needs to be completed. 0 means unlimited.
   };
 
   public timeElapsed: number;
