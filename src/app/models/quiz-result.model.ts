@@ -19,7 +19,7 @@ export class QuizResult implements IQuizResult {
     this._tips = 0;
     this.answers.forEach((person, index) => {
       if (person.answer && person.answer !== '') {
-        if (person.showedTip) {
+        if (person.showedTip && person.isCorrect) {
           this._tips++;
         }
 
